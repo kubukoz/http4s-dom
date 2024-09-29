@@ -72,7 +72,7 @@ object WebSocketStreamClient {
 
                 // todo: do we ever have a "last"?
                 case text: String =>
-                  Some(WSFrame.Text(text.asInstanceOf[String], last = false))
+                  Some(WSFrame.Text(text, last = false))
 
                 case bytes: js.typedarray.Uint8Array =>
                   Some(
